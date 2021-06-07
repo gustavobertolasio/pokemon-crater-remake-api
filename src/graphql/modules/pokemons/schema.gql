@@ -1,0 +1,10 @@
+type POKEMONS {
+  ID: ID
+  POKEMON_NAME: String
+  DEFAULT_SPRITE: String
+  POKEMON_PTYPES: POKEMON_PTYPES
+}
+
+type Query {
+  pokemons: [POKEMONS!]!
+}

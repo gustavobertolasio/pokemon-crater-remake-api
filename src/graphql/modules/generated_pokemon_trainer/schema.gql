@@ -1,0 +1,13 @@
+type GENERATED_POKEMON_TRAINER {
+  ID: ID!
+  GENERATED_POKEMON: GENERATED_POKEMON
+  TRAINER: USERS
+}
+
+type Query {
+  trainerPokemons(trainerId: ID): [GENERATED_POKEMON_TRAINER!]!
+}
+
+type Mutation {
+  pokemonToTrainer(pokemonId: ID, trainerId: ID): GENERATED_POKEMON_TRAINER
+}

@@ -1,0 +1,8 @@
+type PTYPE {
+  ID: ID!
+  TYPENAME: String!
+}
+
+type Query {
+  types: [PTYPE!]!
+}

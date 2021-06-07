@@ -1,0 +1,12 @@
+type GENERATED_POKEMON {
+  ID: ID!
+  POKEMON: POKEMONS
+}
+
+type Query {
+  generatedPokemons: [GENERATED_POKEMON!]!
+}
+
+type Mutation {
+  generatePokemon(pokemonId: ID): GENERATED_POKEMON
+}

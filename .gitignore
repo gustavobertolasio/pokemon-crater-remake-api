@@ -1,0 +1,90 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+/storybook-static
+/public
+
+.scannerwork/**/*
+reports/
+dist.zip
+dist.tar
+components_stash.tar
+# dependencies
+/tests/node_modules
+/node_modules*
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+package-lock.json
+*.iml
+
+# IDE - VSCode
+~/.vscode-root
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+package-lock.json
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+debug.log
+
+tslint.log
+.angulardoc.json
+
+# bower_components
+src/bower_components/*
+
+/tests/node_modules
+/tests/reports
+/tests/downloads
+/documentation
+/bkp-node_modules
+#.json
+src/assets/json/git-version.json
+
+#Test reports
+coverage-all.patch
+report.html
+projects/coverage/results.json
+
+#wiremock
+wiremock*.jar
+.vscode/launch.json
+
+report.*.json
+
+#cypress
+cypress/videos
+cypress/screenshots
+cypress/results
+mochawesome-report/
+
+# directory gererated by machine crashs
+/chromeTemp/*

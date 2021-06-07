@@ -1,0 +1,28 @@
+type USERS {
+  ID: ID!
+  USERNAME: String
+  TRAINER: String
+  REGION: String
+  AGE: Int
+  POKEDEX_CAPTURED: Int
+  POKEDEX_FOUND: Int
+  VICTORIES: Int
+  LOSSES: Int
+  BAG: [BAG_ITEM]
+  TRAINER_POKEMONS: [GENERATED_POKEMON_TRAINER]
+  CURRENT_TEAM: TEAM_TRAINER!
+}
+
+type BAG_ITEM {
+  QTD_ITEM: Int
+  ITEM: ITEMS
+}
+
+type Query {
+  user(id: ID): USERS!
+  users: [USERS!]!
+}
+
+type Mutation {
+  createUser(name: String, password: String): USERS
+}

@@ -1,0 +1,9 @@
+type MAP_SLOT {
+  ID: ID!
+  MAP: MAPS!
+  CAN_ACCESS: Int
+}
+
+type Query {
+  getMapSlots(mapId: ID): [MAP_SLOT!]!
+}

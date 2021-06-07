@@ -1,0 +1,10 @@
+type MAPS {
+  ID: ID!
+  MAP_ARCHIVE_NAME: String!
+  MAP_WIDTH: Int!
+  MAP_HEIGHT: Int!
+}
+
+type Query {
+  getMaps: [MAPS!]!
+}

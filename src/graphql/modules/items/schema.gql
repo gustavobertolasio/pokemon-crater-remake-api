@@ -1,0 +1,8 @@
+type ITEMS {
+  ID: ID!
+  ITEM_NAME: String
+}
+
+type Query {
+  getAllItems: [ITEMS!]!
+}

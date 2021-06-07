@@ -1,0 +1,6 @@
+type POKEMON_PTYPES {
+  ID: ID!
+  POKEMON: POKEMONS!
+  TYPES: [PTYPE!]!
+}
+

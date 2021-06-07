@@ -1,0 +1,7 @@
+type MAP_SLOT_POKEMON {
+  POKEMON: POKEMONS!
+}
+
+type Query {
+  searchPokemonInSlot(mapId: ID, slotId: ID): MAP_SLOT_POKEMON
+}
