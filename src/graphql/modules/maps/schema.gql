@@ -8,3 +8,7 @@ type MAPS {
 type Query {
   getMaps: [MAPS!]!
 }
+
+type Mutation {
+  enterMap(trainerId: ID!, mapId: ID!): MAP_USERS
+}

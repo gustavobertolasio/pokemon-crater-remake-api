@@ -2,9 +2,19 @@ type POKEMONS {
   ID: ID
   POKEMON_NAME: String
   DEFAULT_SPRITE: String
+  BACK_SPRITE: String
   POKEMON_PTYPES: POKEMON_PTYPES
+  IS_INITIAL: Int
+  HP: Int
+  ATTACK: Int
+  DEFENSE: Int
+  SPECIAL_ATTACK: Int
+  SPECIAL_DEFENSE: Int
+  SPEED: Int
+  GROWTH_RATE: GROWTH_RATE
 }
 
 type Query {
   pokemons: [POKEMONS!]!
+  getInitials: [POKEMONS!]!
 }

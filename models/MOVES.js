@@ -1,42 +1,51 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('MAPS', {
+  return sequelize.define('MOVES', {
     ID: {
-      autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    MAP_ARCHIVE_NAME: {
+    SKILL_NAME: {
       type: DataTypes.STRING(255),
       allowNull: false
     },
-    MAP_WIDTH: {
+    ID_PTYPE: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'PTYPE',
+        key: 'ID'
+      }
+    },
+    ID_CATEGORY: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'MOVE_CATEGORY',
+        key: 'ID'
+      }
+    },
+    MAX_PP: {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    MAP_HEIGHT: {
+    SKILL_POWER: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: true
     },
-    MIN_POKEMON_LEVEL: {
+    ACCURACY: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 0
-    },
-    MAX_POKEMON_LEVEL: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 0
+      allowNull: true
     }
   }, {
     sequelize,
-    tableName: 'MAPS',
+    tableName: 'MOVES',
     schema: 'dbo',
     timestamps: false,
     indexes: [
       {
-        name: "PK__MAPS__3214EC27EE0BBE9F",
+        name: "PK__MOVES__3214EC2799817123",
         unique: true,
         fields: [
           { name: "ID" },

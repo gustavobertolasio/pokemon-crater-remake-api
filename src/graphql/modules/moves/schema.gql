@@ -1,0 +1,12 @@
+type MOVES {
+  SKILL_NAME: String
+  TYPE: PTYPE
+  CATEGORY: MOVE_CATEGORY
+  MAX_PP: Int
+  SKILL_POWER: Int
+  ACCURACY: Int
+}
+
+type Query {
+  getMoves: [MOVES]
+}

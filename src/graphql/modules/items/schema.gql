@@ -5,4 +5,10 @@ type ITEMS {
 
 type Query {
   getAllItems: [ITEMS!]!
+  checkItemType(itemId: ID): String
+}
+
+
+type Mutation {
+  buyItem(userId: ID, itemId: ID): String
 }

@@ -1,42 +1,28 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('MAPS', {
+  return sequelize.define('GROWTH_RATE', {
     ID: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    MAP_ARCHIVE_NAME: {
+    GROWTH_TYPE: {
       type: DataTypes.STRING(255),
       allowNull: false
     },
-    MAP_WIDTH: {
-      type: DataTypes.INTEGER,
+    GROWTH_ACRONYM: {
+      type: DataTypes.STRING(4),
       allowNull: false
-    },
-    MAP_HEIGHT: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    MIN_POKEMON_LEVEL: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 0
-    },
-    MAX_POKEMON_LEVEL: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 0
     }
   }, {
     sequelize,
-    tableName: 'MAPS',
+    tableName: 'GROWTH_RATE',
     schema: 'dbo',
     timestamps: false,
     indexes: [
       {
-        name: "PK__MAPS__3214EC27EE0BBE9F",
+        name: "PK__GROWTH_R__3214EC271D2AC65B",
         unique: true,
         fields: [
           { name: "ID" },

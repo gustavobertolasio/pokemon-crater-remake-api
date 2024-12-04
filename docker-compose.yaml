@@ -1,0 +1,20 @@
+
+services:
+  mssql:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pcr-db
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Um2tr&45678
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./scriptPokemon.sql:/scriptPokemon.sql
+    networks:
+      - mssql-network
+
+networks:
+  mssql-network:
+    driver: bridge

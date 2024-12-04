@@ -1,6 +1,9 @@
 type GENERATED_POKEMON {
   ID: ID!
   POKEMON: POKEMONS
+  HP: Int
+  CURRENT_HP: Int
+  POKEMON_LEVEL: Int
 }
 
 type Query {
@@ -8,5 +11,14 @@ type Query {
 }
 
 type Mutation {
-  generatePokemon(pokemonId: ID): GENERATED_POKEMON
+  generatePokemon(pokemonId: ID, mapId: ID): GENERATED_POKEMON
+  catchPokemon(
+    generatedPokemonId: ID
+    pokeballItemId: ID
+    trainerId: ID
+  ): [Boolean]
+}
+
+type Subscription {
+  catchingPokemon(trainerId: ID): Boolean
 }

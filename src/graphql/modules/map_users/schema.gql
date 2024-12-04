@@ -1,0 +1,17 @@
+type MAP_USERS {
+  ID: ID!
+  PLAYER_SLOT: Int
+  USER: USERS
+}
+
+type Query {
+  getUsersInMap(mapId: ID): [MAP_USERS]
+}
+
+type Mutation {
+  walkInMap(mapId: ID, trainerId: ID, slotToWalk: Int): Int
+}
+
+type Subscription {
+  usersInMap: [MAP_USERS]
+}

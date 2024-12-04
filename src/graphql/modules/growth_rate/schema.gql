@@ -1,0 +1,9 @@
+type GROWTH_RATE {
+  ID: ID!
+  GROWTH_TYPE: String
+  GROWTH_ACRONYM: String
+}
+
+type Query {
+  getGrowthRates: [GROWTH_RATE!]!
+}

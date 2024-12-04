@@ -10,11 +10,15 @@ type TYPE {
 }
 
 type Query {
-  team(trainerId: ID): [TEAM_TRAINER!]!
+  team(trainerId: ID): TEAM_TRAINER!
 }
 
 type Mutation {
   addNewPokeToTeam(generatedPokemonIdBeingAdded: ID, trainerId: ID): [TYPE]!
-  changePokemonFromTeam(generatedPokemonIdBeingAdded: ID, slot: Int, trainerId: ID): [TYPE]!
+  changePokemonFromTeam(
+    generatedPokemonIdBeingAdded: ID
+    slot: Int
+    trainerId: ID
+  ): [TYPE]!
   removeFromTeam(slot: Int, trainerId: ID): [TYPE]!
 }

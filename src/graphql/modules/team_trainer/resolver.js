@@ -28,7 +28,10 @@ export const resolver = {
         where: { ID: pokemon.ID_GENERATED_POKEMON },
       }),
   },
-  Query: {},
+  Query: {
+    team: async (_, { trainerId }) =>
+      await TEAM_TRAINER.findAll({ where: { ID_TRAINER: trainerId } }),
+  },
   Mutation: {
     addNewPokeToTeam: async (
       _,

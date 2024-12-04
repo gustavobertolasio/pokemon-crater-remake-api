@@ -1,0 +1,4 @@
+export const SLOT_CHANGED = "SLOT_CHANGED";
+export const POKEBALL_TICK = "POKEBALL_TICK";
+export const POKEMON_FLEE = "POKEMON_FLEE";
+export const POKEMON_CAUGHT = "POKEMON_CAUGHT";

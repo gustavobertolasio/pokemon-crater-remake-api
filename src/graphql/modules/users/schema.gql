@@ -21,8 +21,20 @@ type BAG_ITEM {
 type Query {
   user(id: ID): USERS!
   users: [USERS!]!
+  logIn(username: String, password: String): USERS
+}
+
+input UserInput {
+  age: Int!
+  chosenInitial: ID!
+  email: String
+  password: String!
+  region: String
+  trainer: String!
+  trainerName: String
+  username: String!
 }
 
 type Mutation {
-  createUser(name: String, password: String): USERS
+  createUser(user: UserInput): USERS
 }

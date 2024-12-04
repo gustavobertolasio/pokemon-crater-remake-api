@@ -1,0 +1,9 @@
+type POKEMON_LEARNSET {
+  POKEMON: POKEMONS
+  MOVE: MOVES
+  LEARN_LEVEL: Int
+}
+
+type Query {
+  getPokemonLearnset(pokemonId: ID): [POKEMON_LEARNSET]
+}

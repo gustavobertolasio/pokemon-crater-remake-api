@@ -25,19 +25,28 @@ module.exports = function(sequelize, DataTypes) {
     },
     POKEDEX_CAPTURED: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      defaultValue: 0
     },
     POKEDEX_FOUND: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      defaultValue: 0
     },
     VICTORIES: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      defaultValue: 0
     },
     LOSSES: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      defaultValue: 0
+    },
+    PASSWORD: {
+      type: DataTypes.STRING(255),
+      allowNull: false,
+      defaultValue: "((0))"
     }
   }, {
     sequelize,

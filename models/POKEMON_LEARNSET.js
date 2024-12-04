@@ -1,42 +1,40 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('MAPS', {
+  return sequelize.define('POKEMON_LEARNSET', {
     ID: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true
     },
-    MAP_ARCHIVE_NAME: {
-      type: DataTypes.STRING(255),
-      allowNull: false
-    },
-    MAP_WIDTH: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    MAP_HEIGHT: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    MIN_POKEMON_LEVEL: {
+    ID_POKEMON: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 0
+      references: {
+        model: 'POKEMONS',
+        key: 'ID'
+      }
     },
-    MAX_POKEMON_LEVEL: {
+    ID_MOVE: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 0
+      references: {
+        model: 'MOVES',
+        key: 'ID'
+      }
+    },
+    LEARN_LEVEL: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     }
   }, {
     sequelize,
-    tableName: 'MAPS',
+    tableName: 'POKEMON_LEARNSET',
     schema: 'dbo',
     timestamps: false,
     indexes: [
       {
-        name: "PK__MAPS__3214EC27EE0BBE9F",
+        name: "PK__POKEMON___3214EC2773FA5CCB",
         unique: true,
         fields: [
           { name: "ID" },

@@ -1,15 +1,8 @@
 {
-  "port": 1433,
-  "username": "sa",
-  "password": "12345",
-  "host": "localhost",
-  "dialect": "mssql",
-  "define": {
-    "schema": "dbo"
-  },
+
   "dialectOptions": {
     "driver": "SQL Server Native Client 11.0",
-    "instanceName": "piroca",
+    "instanceName": "hy",
     "trustedConnection": true,
     "options": {
       "trustedServerCertificate": true,
@@ -19,8 +12,9 @@
   },
   "development": {
     "username": "sa",
-    "password": "12345",
+    "password": "Um2tr&45678",
     "dialect": "mssql",
-    "database": "PCR"
+    "database": "PCR",
+    "port": 1433
   }
 }
